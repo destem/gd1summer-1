@@ -23,18 +23,18 @@ public class WalkScript : MonoBehaviour {
 	}
 
     void movement(){
-        if(Input.GetKey(KeyCode.RightArrow)){
+        if(Input.GetKey(KeyCode.RightArrow) || Input.GetKey("d")){
             player.transform.Translate(new Vector3(speed*Time.deltaTime, 0, 0));
         }
-        else if (Input.GetKey(KeyCode.LeftArrow))
+        else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey("a"))
         {
             player.transform.Translate(new Vector3(-speed * Time.deltaTime, 0, 0));
         }
-        else if (Input.GetKey(KeyCode.UpArrow))
+        else if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey("w"))
         {
             player.transform.Translate(new Vector3(0, speed * Time.deltaTime, 0));
         }
-        else if (Input.GetKey(KeyCode.DownArrow))
+        else if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey("s"))
         {
             player.transform.Translate(new Vector3(0, -speed * Time.deltaTime, 0));
         }
