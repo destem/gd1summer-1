@@ -19,6 +19,8 @@ public class CameraMove : MonoBehaviour {
 		//checking x pos first
         if(m.transform.position.x < 10 && player.transform.position.x % 5 == 0 && player.transform.position.x % 10 != 0 && player.transform.position.x > m.transform.position.x) // moving up to next screen
         {
+            float t = 0; //for lerping movement
+            Vector2 final_pos = 
 
         }
         else if (m.transform.position.x > -10 && player.transform.position.x % 5 == 0 && player.transform.position.x % 10 != 0 && player.transform.position.x < m.transform.position.x) //moving down to next screen
