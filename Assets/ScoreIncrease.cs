@@ -15,8 +15,9 @@ public class ScoreIncrease : MonoBehaviour {
 	}
 
     //destroys collectible and increases score when player collides
-    private void OnCollisionEnter(Collision col)
+    private void OnCollisionEnter2D(Collision2D col)
     {
+        print("collided");
         if (col.gameObject.tag == "Player")
         {
             Manager.Instance.AddScore();
