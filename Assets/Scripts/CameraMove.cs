@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraMove : MonoBehaviour {
     public GameObject player;
-    Camera m; //main camera
+    public Camera m; //main camera
     //Camera moves if player gets halfway off screen, screen is 10x18, assumes 3x3 grid of tiles, 
     //so camera won't move position past +/- 10 on x or +/- 18 on y
 
@@ -16,22 +16,26 @@ public class CameraMove : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		//checking x pos first
-        if(m.transform.position.x < 10 && player.transform.position.x % 5 == 0 && player.transform.position.x % 10 != 0 && player.transform.position.x > m.transform.position.x) // moving up to next screen
+        //checking x pos first
+        Debug.Log(player.transform.position + " " + player.transform.position.x % 5 + " " + player.transform.position.x % 10 +" " + m.transform.position + " "+ m.transform.position.x);
+        if(m.transform.position.x < 10  && player.transform.position.x % 10 == 0 && player.transform.position.x > m.transform.position.x) // moving up to next screen
         {
-            float t = 0; //for lerping movement
-            Vector2 final_pos = 
+            Debug.Log("In if");
+            float t = 10; //for lerping movement
+            Vector2 ini_pos = new Vector2(m.transform.position.x, m.transform.position.y);
+            Vector2 final_pos = new Vector2(m.transform.position.x + 10, m.transform.position.y);
+            m.transform.position = Vector2.Lerp(ini_pos, final_pos, t);
 
         }
-        else if (m.transform.position.x > -10 && player.transform.position.x % 5 == 0 && player.transform.position.x % 10 != 0 && player.transform.position.x < m.transform.position.x) //moving down to next screen
+        else if (m.transform.position.x > -10  && player.transform.position.x % 10 == 0 && player.transform.position.x < m.transform.position.x) //moving down to next screen
         {
 
         }
-        else if (m.transform.position.y < 18 && player.transform.position.y % 9 == 0 && player.transform.position.y % 18 != 0 && player.transform.position.y > m.transform.position.y)// moving right to next screen
+        else if (m.transform.position.y < 18  && player.transform.position.y % 18 == 0 && player.transform.position.y > m.transform.position.y)// moving right to next screen
         {
 
         }
-        else if (m.transform.position.y > -18 && player.transform.position.y % 9 == 0 && player.transform.position.y % 18 != 0 && player.transform.position.y < m.transform.position.y) // moving left to next screen
+        else if (m.transform.position.y > -18  && player.transform.position.y % 18 == 0 && player.transform.position.y < m.transform.position.y) // moving left to next screen
         {
 
         }
