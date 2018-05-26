@@ -207,6 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 778646296}
+  m: {fileID: 0}
 --- !u!1 &778646296
 GameObject:
   m_ObjectHideFlags: 0
