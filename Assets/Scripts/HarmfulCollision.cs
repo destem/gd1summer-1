@@ -30,10 +30,9 @@ public class HarmfulCollision : MonoBehaviour {
 	}*/
 
 	private void OnTriggerEnter2D (Collider2D other) {
-		print ("111111");
 		if (other.tag == "Harmful") {
-			print ("111111");
 			Damage = true;
+			other.gameObject.SetActive (false);
 		}
 	}
 }
