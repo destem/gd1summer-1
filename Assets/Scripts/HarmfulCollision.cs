@@ -5,12 +5,18 @@ using UnityEngine;
 public class HarmfulCollision : MonoBehaviour {
 	
 	public bool Damage = false;
-	public int health;
-	public int DamageCost; 
+	public int health = 4;
+	public int DamageCost = 1; 
+	public GameObject player;
+	public GameObject obstacles;
+
+	private Animator anim_pig;
+	private Animator anim_thing;
+	private bool boom = false;
 
 	// Use this for initialization
 	void Start () {
-		
+		anim_pig = player.GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame
@@ -32,7 +38,12 @@ public class HarmfulCollision : MonoBehaviour {
 	private void OnTriggerEnter2D (Collider2D other) {
 		if (other.tag == "Harmful") {
 			Damage = true;
+			boom = true;
+			anim_thing = other.GetComponent<Animator> ();
+			anim_thing.SetBool ("Boom", boom);
+			anim_pig.SetBool ("Damage", Damage);
 			other.gameObject.SetActive (false);
+			boom = false;
 		}
 	}
 }
