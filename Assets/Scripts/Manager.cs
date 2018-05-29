@@ -23,7 +23,7 @@ public class Manager : MonoBehaviour {
     void Start () {
         score = 0;
         scoreToWin = 1;
-        //SetScoreText();
+        SetScoreText();
 	}
 	
 	// Update is called once per frame
@@ -33,7 +33,6 @@ public class Manager : MonoBehaviour {
 
     public void AddScore()
     {
-
         score++;
         print("score increase");
         //SetScoreText();
