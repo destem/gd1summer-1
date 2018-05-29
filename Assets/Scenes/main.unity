@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 672525491}
   - component: {fileID: 672525490}
   - component: {fileID: 672525489}
+  - component: {fileID: 672525493}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -163,8 +164,8 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 167
-  orthographic: 0
+  field of view: 61
+  orthographic: 1
   orthographic size: 5
   m_Depth: 0
   m_CullingMask:
@@ -188,12 +189,25 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 672525488}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &672525493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 672525488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c8b3657804e7924ebcc4798633124e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 778646296}
+  m: {fileID: 0}
 --- !u!1 &778646296
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,10 +216,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 778646298}
-  - component: {fileID: 778646297}
   - component: {fileID: 778646301}
   - component: {fileID: 778646299}
   - component: {fileID: 778646302}
+  - component: {fileID: 778646297}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -222,7 +236,7 @@ Animator:
   m_GameObject: {fileID: 778646296}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ed9d56dfb21dc40b2a039e2273e0ec40, type: 2}
+  m_Controller: {fileID: 9100000, guid: a067d272a20f54b8b9ee7deaa53a0ffc, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -256,6 +270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 778646296}
+  anim: {fileID: 0}
 --- !u!212 &778646301
 SpriteRenderer:
   m_ObjectHideFlags: 0
