@@ -443,15 +443,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 61113317178157742, guid: 5cc1a0761cb7a1147b639705a2d92a7f,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1895416282812424, guid: 5cc1a0761cb7a1147b639705a2d92a7f, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5cc1a0761cb7a1147b639705a2d92a7f, type: 2}
   m_IsPrefabParent: 0
@@ -498,6 +489,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
+=======
 --- !u!1 &1817918943 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1895416282812424, guid: 5cc1a0761cb7a1147b639705a2d92a7f,
@@ -597,3 +590,4 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1983563778}
+>>>>>>> c79128261a2330170015a1507558cec4e80d9d89

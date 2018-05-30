@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScoreIncrease : MonoBehaviour { 
+public class ScoreIncrease : MonoBehaviour {
+
+    public Manager manager;
 
     // Use this for initialization
     void Start () {
-		
-	}
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -20,9 +22,15 @@ public class ScoreIncrease : MonoBehaviour {
         print("collided");
         if (col.gameObject.tag == "Player")
         {
+<<<<<<< HEAD:Assets/ScoreIncrease.cs
             
             Manager.Instance.AddScore();
+=======
+            print("destroyed");
+>>>>>>> c79128261a2330170015a1507558cec4e80d9d89:Assets/Scripts/ScoreIncrease.cs
             Destroy(gameObject);
+            print (Manager);
+            Manager.Instance.AddScore();
         }
     }
 }
