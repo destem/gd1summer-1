@@ -4,7 +4,11 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 15
+<<<<<<< HEAD
+  productGUID: f598e4ad8a3f3fa41949acae41d837e9
+=======
   productGUID: 9a01ab0b9bcc02849a836de447a3b6c5
+>>>>>>> 4aecd98a3decf3117ef8cb295688a48fc12ec2b7
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -145,12 +149,23 @@ PlayerSettings:
   protectGraphicsMemory: 0
   useHDRDisplay: 0
   m_ColorGamuts: 00000000
-  targetPixelDensity: 0
+  targetPixelDensity: 30
   resolutionScalingMode: 0
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
+<<<<<<< HEAD
+  applicationIdentifier:
+    Android: com.Company.ProductName
+    Standalone: unity.DefaultCompany.gd1summer-1
+    Tizen: com.Company.ProductName
+    iOS: com.Company.ProductName
+    tvOS: com.Company.ProductName
+  buildNumber:
+    iOS: 0
+=======
   applicationIdentifier: {}
   buildNumber: {}
+>>>>>>> 4aecd98a3decf3117ef8cb295688a48fc12ec2b7
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
@@ -165,12 +180,16 @@ PlayerSettings:
   APKExpansionFiles: 0
   keepLoadedShadersAlive: 0
   StripUnusedMeshComponents: 0
+<<<<<<< HEAD
+  VertexChannelCompressionMask: 214
+=======
   VertexChannelCompressionMask: 4054
+>>>>>>> 4aecd98a3decf3117ef8cb295688a48fc12ec2b7
   iPhoneSdkVersion: 988
-  iOSTargetOSVersionString: 
+  iOSTargetOSVersionString: 8.0
   tvOSSdkVersion: 0
   tvOSRequireExtendedGameController: 0
-  tvOSTargetOSVersionString: 
+  tvOSTargetOSVersionString: 9.0
   uIPrerenderedIcon: 0
   uIRequiresPersistentWiFi: 0
   uIRequiresFullScreen: 1
@@ -224,7 +243,11 @@ PlayerSettings:
   iOSMetalForceHardShadows: 0
   metalEditorSupport: 1
   metalAPIValidation: 1
+<<<<<<< HEAD
+  iOSRenderExtraFrameOnPause: 1
+=======
   iOSRenderExtraFrameOnPause: 0
+>>>>>>> 4aecd98a3decf3117ef8cb295688a48fc12ec2b7
   appleDeveloperTeamID: 
   iOSManualSigningProvisioningProfileID: 
   tvOSManualSigningProvisioningProfileID: 
@@ -236,7 +259,11 @@ PlayerSettings:
   clonedFromGUID: 00000000000000000000000000000000
   templatePackageId: 
   templateDefaultScene: 
+<<<<<<< HEAD
+  AndroidTargetArchitectures: 5
+=======
   AndroidTargetArchitectures: 1
+>>>>>>> 4aecd98a3decf3117ef8cb295688a48fc12ec2b7
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
   AndroidKeystoreName: 
@@ -262,10 +289,22 @@ PlayerSettings:
   openGLRequireES31AEP: 0
   m_TemplateCustomTags: {}
   mobileMTRendering:
+<<<<<<< HEAD
+    iPhone: 1
+    tvOS: 1
+  m_BuildTargetGroupLightmapEncodingQuality:
+  - m_BuildTarget: Standalone
+    m_EncodingQuality: 1
+  - m_BuildTarget: XboxOne
+    m_EncodingQuality: 1
+  - m_BuildTarget: PS4
+    m_EncodingQuality: 1
+=======
     Android: 1
     iPhone: 1
     tvOS: 1
   m_BuildTargetGroupLightmapEncodingQuality: []
+>>>>>>> 4aecd98a3decf3117ef8cb295688a48fc12ec2b7
   playModeTestRunnerEnabled: 0
   runPlayModeTestAsEditModeTest: 0
   actionOnDotNetUnhandledException: 1
@@ -412,7 +451,11 @@ PlayerSettings:
   ps4VideoOutPixelFormat: 0
   ps4VideoOutInitialWidth: 1920
   ps4VideoOutBaseModeInitialWidth: 1920
+<<<<<<< HEAD
+  ps4VideoOutReprojectionRate: 120
+=======
   ps4VideoOutReprojectionRate: 60
+>>>>>>> 4aecd98a3decf3117ef8cb295688a48fc12ec2b7
   ps4PronunciationXMLPath: 
   ps4PronunciationSIGPath: 
   ps4BackgroundImagePath: 
@@ -437,7 +480,11 @@ PlayerSettings:
   ps4DownloadDataSize: 0
   ps4GarlicHeapSize: 2048
   ps4ProGarlicHeapSize: 2560
+<<<<<<< HEAD
+  ps4Passcode: frAQBc8Wsa1xVPfvJcrgRYwTiizs2trQ
+=======
   ps4Passcode: eaoEiIgxIX4a2dREbbSqWy6yhKIDCdJO
+>>>>>>> 4aecd98a3decf3117ef8cb295688a48fc12ec2b7
   ps4pnSessions: 1
   ps4pnPresence: 1
   ps4pnFriends: 1
@@ -531,7 +578,13 @@ PlayerSettings:
   webGLLinkerTarget: 0
   scriptingDefineSymbols: {}
   platformArchitecture: {}
+<<<<<<< HEAD
+  scriptingBackend:
+    Standalone: 0
+    WebPlayer: 0
+=======
   scriptingBackend: {}
+>>>>>>> 4aecd98a3decf3117ef8cb295688a48fc12ec2b7
   il2cppCompilerConfiguration: {}
   incrementalIl2cppBuild: {}
   allowUnsafeCode: 0
@@ -540,7 +593,11 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
+<<<<<<< HEAD
+  metroPackageName: gd1summer-1
+=======
   metroPackageName: Git
+>>>>>>> 4aecd98a3decf3117ef8cb295688a48fc12ec2b7
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
@@ -613,8 +670,21 @@ PlayerSettings:
     daydream:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
+<<<<<<< HEAD
+  cloudServicesEnabled:
+    Analytics: 0
+    Build: 0
+    Collab: 0
+    ErrorHub: 0
+    Game_Performance: 0
+    Hub: 0
+    Purchasing: 0
+    UNet: 0
+    Unity_Ads: 0
+=======
   cloudServicesEnabled: {}
-  facebookSdkVersion: 
+>>>>>>> 4aecd98a3decf3117ef8cb295688a48fc12ec2b7
+  facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
   cloudProjectId: 
   projectName: 
