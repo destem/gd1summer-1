@@ -1,1 +1,6 @@
+<<<<<<< HEAD
 m_EditorVersion: 2018.1.1f1
+=======
+m_EditorVersion: 5.4.5p5
+m_StandardAssetsVersion: 0
+>>>>>>> dd8febc2c71689c7985c78144b4947f8bec29602
