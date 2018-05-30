@@ -1,15 +1,15 @@
 fileFormatVersion: 2
-guid: 90dffa3df94714598b1b9855f750995e
+guid: 87c5fd8c6143b44e9bcffa2ba219cffa
 TextureImporter:
   fileIDToRecycleName:
-    21300000: GPSpriteSheetFront_0
-    21300002: GPSpriteSheetFront_1
-    21300004: GPSpriteSheetFront_2
-    21300006: GPSpriteSheetFront_3
-    21300008: GPSpriteSheetFront_4
-    21300010: GPSpriteSheetFront_5
-    21300012: GPSpriteSheetFront_6
-    21300014: GPSpriteSheetFront_7
+    21300000: GPSpriteSheetIdle_0
+    21300002: GPSpriteSheetIdle_1
+    21300004: GPSpriteSheetIdle_2
+    21300006: GPSpriteSheetIdle_3
+    21300008: GPSpriteSheetIdle_4
+    21300010: GPSpriteSheetIdle_5
+    21300012: GPSpriteSheetIdle_6
+    21300014: GPSpriteSheetIdle_7
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GPSpriteSheetFront_0
+      name: GPSpriteSheetIdle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -137,13 +137,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b13aa116753414ccf9fb2264b13c1f13
+      spriteID: fd9b707c5d04c4d1ca9d3c05a2a2b6bf
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GPSpriteSheetFront_1
+      name: GPSpriteSheetIdle_1
       rect:
         serializedVersion: 2
         x: 256
@@ -157,13 +157,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3414f7906498347138de784b88b0bb11
+      spriteID: 897ef05805e1c4db88bfd2334f941228
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GPSpriteSheetFront_2
+      name: GPSpriteSheetIdle_2
       rect:
         serializedVersion: 2
         x: 512
@@ -177,13 +177,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2b306336c5fb448bbf58832a98f3ca5
+      spriteID: 695e0bfcaae0a4ee5999d1db3d3442af
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GPSpriteSheetFront_3
+      name: GPSpriteSheetIdle_3
       rect:
         serializedVersion: 2
         x: 768
@@ -197,13 +197,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95e806c17e121466a9e6893bc708227f
+      spriteID: 9da9fc7af9d7245289c1cb1ca061384a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GPSpriteSheetFront_4
+      name: GPSpriteSheetIdle_4
       rect:
         serializedVersion: 2
         x: 0
@@ -217,13 +217,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4618baed5f1b4436a0754058d358eb7
+      spriteID: b75c57b217277495cb2441b9a076a5b3
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GPSpriteSheetFront_5
+      name: GPSpriteSheetIdle_5
       rect:
         serializedVersion: 2
         x: 256
@@ -237,13 +237,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c658dcb9f9c3840d79172f35c4b573f3
+      spriteID: f4cad20cd466d4452a157e09ce7cd457
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GPSpriteSheetFront_6
+      name: GPSpriteSheetIdle_6
       rect:
         serializedVersion: 2
         x: 512
@@ -257,13 +257,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e8eacb17bfbf4bc58429c92de78b6bb
+      spriteID: 2297aa7a175a1432dba5d53739afb345
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GPSpriteSheetFront_7
+      name: GPSpriteSheetIdle_7
       rect:
         serializedVersion: 2
         x: 768
@@ -277,7 +277,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d21e26f1388443c28f0c8eca9204aab
+      spriteID: 6106c6076399749a6a29c3b8e34d4cc0
       vertices: []
       indices: 
       edges: []
@@ -285,7 +285,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 368d2b932c6dd416ba656d83ba136b16
+    spriteID: e22cc4a31f28b43dfa1d5e844d4f4599
     vertices: []
     indices: 
     edges: []
