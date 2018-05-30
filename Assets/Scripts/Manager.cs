@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Manager : MonoBehaviour {
+public class Manager : MonoBehaviour
+{
 
     public int score;
     public int scoreToWin;
@@ -19,23 +20,36 @@ public class Manager : MonoBehaviour {
         }
     }
 
+    private void Awake()
+    {
+        if (instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+
+        instance = this;
+        DontDestroyOnLoad(this.gameObject);
+    }
+
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         score = 0;
         scoreToWin = 1;
         SetScoreText();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 
     public void AddScore()
     {
         score++;
         print("score increase");
-        //SetScoreText();
+        SetScoreText();
 
         /*if (score >= scoreToWin)
         {
