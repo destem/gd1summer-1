@@ -24,7 +24,6 @@ public class ScoreIncrease : MonoBehaviour {
         {
             print("destroyed");
             Destroy(gameObject);
-            print (Manager);
             Manager.Instance.AddScore();
         }
     }
