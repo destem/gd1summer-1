@@ -3,22 +3,28 @@ using System.Collections;
 
 public class Walk_test : MonoBehaviour
 {
-
-    public float speed;             //Floating point variable to store the player's movement speed.
+    [SerializeField]
+    private float speed;             //Floating point variable to store the player's movement speed.
 
     private Rigidbody2D rb2d;       //Store a reference to the Rigidbody2D component required to use 2D Physics.
+
+    private Vector2 currentVelocity;
 
     // Use this for initialization
     public float playerSpeed = 4f;
 
     void Start()
     {
-
+        rb2d = GetComponent<Rigidbody2D>();
     }
 
-    void FixedUpdate()
+
+	private void Update()
+	{
+        currentVelocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+	}
+	void FixedUpdate()
     {
-        Vector2 targetVelocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        GetComponent<Rigidbody2D>().velocity = targetVelocity * playerSpeed;
+        rb2d.velocity = currentVelocity * playerSpeed;
     }
 }
