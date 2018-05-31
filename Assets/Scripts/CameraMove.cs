@@ -20,14 +20,14 @@ public class CameraMove : MonoBehaviour
     void Update()
     {
         //checking y pos first
-        float t = 10;
+        float t = 1f;
         if (player.transform.position.y >= 0)
         {
-            if (m.transform.position.y < 7.5 && player.transform.position.y > m.transform.position.y && player.transform.position.y % 5 >= 4.9) // moving up
+            if (m.transform.position.y < 10 && player.transform.position.y > m.transform.position.y && player.transform.position.y % 5 >= 4.9) // moving up
             {
 
                 Vector3 ini_pos = new Vector3(m.transform.position.x, m.transform.position.y, -1.0f); // starting position of camera
-                Vector3 final_pos = new Vector3(m.transform.position.x, m.transform.position.y + 7.5f, -1.0f);// ending position of camera
+                Vector3 final_pos = new Vector3(m.transform.position.x, m.transform.position.y + 10f, -1.0f);// ending position of camera
                 m.transform.position = Vector3.Lerp(ini_pos, final_pos, t); // Lerp and move camera
                 player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 1, player.transform.position.z); // move player out of buffer zone
 
@@ -36,7 +36,7 @@ public class CameraMove : MonoBehaviour
             {
 
                 Vector3 ini_pos = new Vector3(m.transform.position.x, m.transform.position.y, -1.0f); // starting position of camera
-                Vector3 final_pos = new Vector3(m.transform.position.x, m.transform.position.y - 7.5f, -1.0f);// ending position of camera
+                Vector3 final_pos = new Vector3(m.transform.position.x, m.transform.position.y - 10f, -1.0f);// ending position of camera
                 m.transform.position = Vector3.Lerp(ini_pos, final_pos, t);// Lerp and move camera
                 player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y - 1, player.transform.position.z);// move player out of buffer zone
             }
@@ -47,33 +47,33 @@ public class CameraMove : MonoBehaviour
             {
 
                 Vector3 ini_pos = new Vector3(m.transform.position.x, m.transform.position.y, -1.0f); // starting position of camera
-                Vector3 final_pos = new Vector3(m.transform.position.x, m.transform.position.y + 7.5f, -1.0f);// ending position of camera
+                Vector3 final_pos = new Vector3(m.transform.position.x, m.transform.position.y + 10f, -1.0f);// ending position of camera
                 m.transform.position = Vector3.Lerp(ini_pos, final_pos, t);// Lerp and move camera
                 player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 1, player.transform.position.z);// move player out of buffer zone
 
             }
-            else if (m.transform.position.y > -7.5f && player.transform.position.y < m.transform.position.y && player.transform.position.y % 5 <= -4.9) //moving down to next screen
+            else if (m.transform.position.y > -10f && player.transform.position.y < m.transform.position.y && player.transform.position.y % 5 <= -4.9) //moving down to next screen
             {
 
                 Vector3 ini_pos = new Vector3(m.transform.position.x, m.transform.position.y, -1.0f); // starting position of camera
-                Vector3 final_pos = new Vector3(m.transform.position.x, m.transform.position.y - 7.5f, -1.0f);// ending position of camera
+                Vector3 final_pos = new Vector3(m.transform.position.x, m.transform.position.y - 10f, -1.0f);// ending position of camera
                 m.transform.position = Vector3.Lerp(ini_pos, final_pos, t);// Lerp and move camera
                 player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y - 1, player.transform.position.z);// move player out of buffer zone
             }
         }
         if (player.transform.position.x >= 0)
         {
-            if (m.transform.position.x < 16 && player.transform.position.x % 8 >= 7.9 && player.transform.position.x > m.transform.position.x)// moving right to next screen
+            if (m.transform.position.x < 18 && player.transform.position.x % 8 >= 7.9 && player.transform.position.x > m.transform.position.x)// moving right to next screen
             {
                 Vector3 ini_pos = new Vector3(m.transform.position.x, m.transform.position.y, -1.0f); // starting position of camera
-                Vector3 final_pos = new Vector3(m.transform.position.x + 16, m.transform.position.y, -1.0f);// ending position of camera
+                Vector3 final_pos = new Vector3(m.transform.position.x + 18, m.transform.position.y, -1.0f);// ending position of camera
                 m.transform.position = Vector3.Lerp(ini_pos, final_pos, t); // Lerp and move camera
                 player.transform.position = new Vector3(player.transform.position.x + 1, player.transform.position.y, player.transform.position.z); // move player out of buffer zone
             }
-            else if (m.transform.position.x > -16 && player.transform.position.x % 8 <= 0.2 && player.transform.position.x < m.transform.position.x) // moving left to next screen
+            else if (m.transform.position.x > -18 && player.transform.position.x % 8 <= 0.2 && player.transform.position.x < m.transform.position.x) // moving left to next screen
             {
                 Vector3 ini_pos = new Vector3(m.transform.position.x, m.transform.position.y, -1.0f); // starting position of camera
-                Vector3 final_pos = new Vector3(m.transform.position.x - 16, m.transform.position.y, -1.0f);// ending position of camera
+                Vector3 final_pos = new Vector3(m.transform.position.x - 18, m.transform.position.y, -1.0f);// ending position of camera
                 m.transform.position = Vector3.Lerp(ini_pos, final_pos, t);// Lerp and move camera
                 player.transform.position = new Vector3(player.transform.position.x - 1, player.transform.position.y, player.transform.position.z);// move player out of buffer zone
             }
@@ -84,16 +84,16 @@ public class CameraMove : MonoBehaviour
             {
 
                 Vector3 ini_pos = new Vector3(m.transform.position.x, m.transform.position.y, -1.0f); // starting position of camera
-                Vector3 final_pos = new Vector3(m.transform.position.x + 16, m.transform.position.y, -1.0f);// ending position of camera
+                Vector3 final_pos = new Vector3(m.transform.position.x + 18, m.transform.position.y, -1.0f);// ending position of camera
                 m.transform.position = Vector3.Lerp(ini_pos, final_pos, t);// Lerp and move camera
                 player.transform.position = new Vector3(player.transform.position.x + 1, player.transform.position.y, player.transform.position.z);// move player out of buffer zone
 
             }
-            else if (m.transform.position.x > -16 && player.transform.position.x < m.transform.position.x && player.transform.position.x % 8 <= -7.9) //moving down to next screen
+            else if (m.transform.position.x > -18 && player.transform.position.x < m.transform.position.x && player.transform.position.x % 8 <= -7.9) //moving down to next screen
             {
 
                 Vector3 ini_pos = new Vector3(m.transform.position.x, m.transform.position.y, -1.0f); // starting position of camera
-                Vector3 final_pos = new Vector3(m.transform.position.x - 16, m.transform.position.y, -1.0f);// ending position of camera
+                Vector3 final_pos = new Vector3(m.transform.position.x - 18, m.transform.position.y, -1.0f);// ending position of camera
                 m.transform.position = Vector3.Lerp(ini_pos, final_pos, t);// Lerp and move camera
                 player.transform.position = new Vector3(player.transform.position.x - 1, player.transform.position.y, player.transform.position.z);// move player out of buffer zone
             }
