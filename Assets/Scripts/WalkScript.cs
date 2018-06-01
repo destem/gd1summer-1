@@ -13,9 +13,13 @@ public class WalkScript : MonoBehaviour {
     private Vector2 currentVelocity;
     public GameObject player;
     Animator anim;
+
+    private HarmfulCollision harmfulCollision;
+
 	void Start () {
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        harmfulCollision = GetComponent<HarmfulCollision>();
 
 	}
 	
@@ -23,6 +27,18 @@ public class WalkScript : MonoBehaviour {
 	void Update () {
 
         movement();
+        if(harmfulCollision.Damage){
+            print("damage");
+            anim.SetBool("touchEnemy", true);
+
+        }
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("hurtAnim")){
+            anim.SetBool("touchEnemy", false);
+        }
+        if(anim.GetBool("touchEnemy")){
+            print("yep");
+        }
+
 
 		
 	}
@@ -30,31 +46,20 @@ public class WalkScript : MonoBehaviour {
     void movement(){
 
 
-        anim.SetBool("keyDown", false);
-        anim.SetBool("goingUp", false);
-        anim.SetBool("goingDown", false);
-        anim.SetBool("goingLeft", false);
-        anim.SetBool("goingRight", false);
-        currentVelocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        if(Input.anyKey){
-            anim.SetBool("keyDown", true);
-        }
-        if(Input.GetKey(KeyCode.RightArrow) || Input.GetKey("d")){
-            anim.SetBool("goingRight", true);
-        }
-        else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey("a"))
-        {
-            anim.SetBool("goingLeft", true);
-        }
-        else if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey("w"))
-        {
-            anim.SetBool("goingUp", true);
-        }
-        else if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey("s"))
-        {
-            anim.SetBool("goingDown", true);
-        }
+        anim.SetBool("isIdle", false);
+        anim.SetBool("isMoving", true);
 
+        currentVelocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+
+        anim.SetFloat("moveX", currentVelocity.x);
+        anim.SetFloat("moveY", currentVelocity.y);
+
+        if(currentVelocity== Vector2.zero){
+            anim.SetBool("isMoving", false);
+            anim.SetBool("isIdle", true);
+        }
+            
+        
 
     }
     void FixedUpdate()
