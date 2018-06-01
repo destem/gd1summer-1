@@ -689,35 +689,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 1979595028987976, guid: 5ada8a11e893440898b03ccb2660ef78, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 61907687030959912, guid: 5ada8a11e893440898b03ccb2660ef78,
+    - target: {fileID: 114725524123341426, guid: 5ada8a11e893440898b03ccb2660ef78,
         type: 2}
-      propertyPath: m_Offset.x
-      value: -0.014421225
-      objectReference: {fileID: 0}
-    - target: {fileID: 61907687030959912, guid: 5ada8a11e893440898b03ccb2660ef78,
-        type: 2}
-      propertyPath: m_Size.x
-      value: 1.3270414
-      objectReference: {fileID: 0}
-    - target: {fileID: 61907687030959912, guid: 5ada8a11e893440898b03ccb2660ef78,
-        type: 2}
-      propertyPath: m_Offset.y
-      value: -0.1339519
-      objectReference: {fileID: 0}
-    - target: {fileID: 61907687030959912, guid: 5ada8a11e893440898b03ccb2660ef78,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 0.9202323
-      objectReference: {fileID: 0}
-    - target: {fileID: 212698821347612200, guid: 5ada8a11e893440898b03ccb2660ef78,
-        type: 2}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: obstacles
+      value: 
+      objectReference: {fileID: 916469968}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ada8a11e893440898b03ccb2660ef78, type: 2}
   m_IsPrefabParent: 0
@@ -726,22 +702,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1979595028987976, guid: 5ada8a11e893440898b03ccb2660ef78,
     type: 2}
   m_PrefabInternal: {fileID: 1260558597}
---- !u!114 &1260558599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1260558598}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbb1632d49bcd7244b9ec5f9b8da8ff5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Damage: 0
-  health: 4
-  DamageCost: 1
-  player: {fileID: 1260558598}
-  obstacles: {fileID: 916469968}
 --- !u!1001 &1261278207
 Prefab:
   m_ObjectHideFlags: 0
@@ -883,6 +843,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1260558598}
   m: {fileID: 1308564081}
+--- !u!1 &1330713764 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1901486975765380, guid: 0a0340255b61b6d4099a6bbc4da784ad,
+    type: 2}
+  m_PrefabInternal: {fileID: 1366619086}
+--- !u!50 &1330713768
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1330713764}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &1366619086
 Prefab:
   m_ObjectHideFlags: 0
