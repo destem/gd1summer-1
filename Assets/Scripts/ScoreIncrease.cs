@@ -22,6 +22,7 @@ public class ScoreIncrease : MonoBehaviour {
         print("collided");
         if (col.gameObject.tag == "Player")
         {
+            
             print("destroyed");
             Destroy(gameObject);
             Manager.Instance.AddScore();

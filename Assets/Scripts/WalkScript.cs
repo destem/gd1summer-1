@@ -25,7 +25,6 @@ public class WalkScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
         movement();
         if(harmfulCollision.Damage){
             print("damage");
@@ -34,6 +33,10 @@ public class WalkScript : MonoBehaviour {
         }
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("hurtAnim")){
             anim.SetBool("touchEnemy", false);
+        }
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("eatingAnim"))
+        {
+            anim.SetBool("isEating", false);
         }
         if(anim.GetBool("touchEnemy")){
             print("yep");
