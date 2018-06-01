@@ -37,6 +37,7 @@ public class HarmfulCollision : MonoBehaviour {
 
 	private void OnTriggerEnter2D (Collider2D other) {
 		if (other.tag == "Harmful") {
+            GetComponent<Animator>().SetBool("touchEnemy", true);
 			Damage = true;
 			boom = true;
 			anim_thing = other.GetComponent<Animator> ();

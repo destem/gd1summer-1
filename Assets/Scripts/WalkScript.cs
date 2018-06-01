@@ -5,13 +5,21 @@ using UnityEngine;
 public class WalkScript : MonoBehaviour {
 
     // Use this for initialization
+    [SerializeField]
+    private float playerSpeed= 5f;             //Floating point variable to store the player's movement speed.
 
+    private Rigidbody2D rb2d;       //Store a reference to the Rigidbody2D component required to use 2D Physics.
+
+    private Vector2 currentVelocity;
     public GameObject player;
-    float speed = 5f;
     Animator anim;
-	void Start () {
 
+    private HarmfulCollision harmfulCollision;
+
+	void Start () {
+        rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        harmfulCollision = GetComponent<HarmfulCollision>();
 
 	}
 	
@@ -19,40 +27,45 @@ public class WalkScript : MonoBehaviour {
 	void Update () {
 
         movement();
+        if(harmfulCollision.Damage){
+            print("damage");
+            anim.SetBool("touchEnemy", true);
+
+        }
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("hurtAnim")){
+            anim.SetBool("touchEnemy", false);
+        }
+        if(anim.GetBool("touchEnemy")){
+            print("yep");
+        }
+
 
 		
 	}
 
     void movement(){
-        anim.SetBool("keyDown", false);
-        anim.SetBool("goingUp", false);
-        anim.SetBool("goingDown", false);
-        anim.SetBool("goingLeft", false);
-        anim.SetBool("goingRight", false);
 
-        if(Input.anyKey){
-            anim.SetBool("keyDown", true);
-        }
-        if(Input.GetKey(KeyCode.RightArrow) || Input.GetKey("d")){
-            anim.SetBool("goingRight", true);
-            player.transform.Translate(new Vector3(speed*Time.deltaTime, 0, 0));
-        }
-        else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey("a"))
-        {
-            anim.SetBool("goingLeft", true);
-            player.transform.Translate(new Vector3(-speed * Time.deltaTime, 0, 0));
-        }
-        else if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey("w"))
-        {
-            anim.SetBool("goingUp", true);
-            player.transform.Translate(new Vector3(0, speed * Time.deltaTime, 0));
-        }
-        else if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey("s"))
-        {
-            anim.SetBool("goingDown", true);
-            player.transform.Translate(new Vector3(0, -speed * Time.deltaTime, 0));
-        }
 
+        anim.SetBool("isIdle", false);
+        anim.SetBool("isMoving", true);
+
+        currentVelocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+
+        anim.SetFloat("moveX", currentVelocity.x);
+        anim.SetFloat("moveY", currentVelocity.y);
+
+        if(currentVelocity== Vector2.zero){
+            anim.SetBool("isMoving", false);
+            anim.SetBool("isIdle", true);
+        }
+            
+        
 
     }
+    void FixedUpdate()
+    {
+        rb2d.velocity = currentVelocity * playerSpeed;
+    }
 }
+
+
