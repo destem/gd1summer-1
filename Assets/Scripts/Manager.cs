@@ -47,6 +47,8 @@ public class Manager : MonoBehaviour
 
     public void AddScore()
     {
+
+        GameObject.FindWithTag("Player").GetComponent<Animator>().SetBool("isEating", true);
         score++;
         print("score increase");
         SetScoreText();
