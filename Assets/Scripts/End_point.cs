@@ -2,15 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class End_point : MonoBehaviour {
+public class End_point : MonoBehaviour
+{
+    private Manager m;
+    // Use this for initialization
+    void Start()
+    {
+        m = GetComponent<Manager>();
+    }
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        transform.Rotate(Vector2.up * Time.deltaTime *100);
+    // Update is called once per frame
+    void Update()
+    {
+        transform.Rotate(Vector2.up * Time.deltaTime * 100);
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Player")
+        {
+            if (m.score == m.scoreToWin)
+            {
+                Debug.Log("You win!");
+            }
+        }
     }
 }
