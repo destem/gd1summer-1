@@ -6,13 +6,13 @@ public class healthManager : MonoBehaviour {
 
 
     HarmfulCollision harmfulCollision;
-    public GameObject heartGameObject;
+    public GameObject player;
     int currentLives;
 
 	// Use this for initialization
     void Start () {
-        
-        harmfulCollision = GetComponent<HarmfulCollision>();
+        print("initialize");
+        harmfulCollision = player.GetComponent<HarmfulCollision>();
         currentLives = harmfulCollision.health;
 	}
 	
@@ -20,6 +20,13 @@ public class healthManager : MonoBehaviour {
 	void Update () {
         
         if(harmfulCollision.Damage){
+            
+            print("deactivate");
+
         }
 	}
+    public void loseLife(){
+        currentLives--;
+        gameObject.transform.GetChild(currentLives).gameObject.SetActive(false);
+    }
 }

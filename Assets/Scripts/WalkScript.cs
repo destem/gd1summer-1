@@ -38,9 +38,7 @@ public class WalkScript : MonoBehaviour {
         {
             anim.SetBool("isEating", false);
         }
-        if(anim.GetBool("touchEnemy")){
-            print("yep");
-        }
+
 
 
 		
