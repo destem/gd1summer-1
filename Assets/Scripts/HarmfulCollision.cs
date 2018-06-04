@@ -53,7 +53,7 @@ public class HarmfulCollision : MonoBehaviour {
 			anim_thing = other.GetComponent<Animator> ();
 			anim_thing.SetBool ("Boom", boom);
 			anim_pig.SetBool ("Damage", Damage);
-			other.gameObject.SetActive (false);
+			//other.gameObject.SetActive (false);
 			boom = false;
 		}
 	}
