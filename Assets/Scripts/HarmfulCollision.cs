@@ -9,9 +9,6 @@ public class HarmfulCollision : MonoBehaviour {
 	public int health = 4;
 	public int DamageCost = 1; 
 	public GameObject player;
-	public GameObject obstacles;
-	public Image[] hearts;
-	public Sprite FullHeart;
 
 	private Animator lose_heart;
 	private Animator anim_pig;
@@ -20,13 +17,7 @@ public class HarmfulCollision : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		hearts.Length = health;
 		anim_pig = player.GetComponent<Animator> ();
-		for (int i = 0; i < hearts.Length; i++) {
-			if ( i < health){
-				hearts [i].sprite = FullHeart;
-			}
-		}
 	}
 	
 	// Update is called once per frame
