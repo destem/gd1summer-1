@@ -9,6 +9,7 @@ public class HarmfulCollision : MonoBehaviour {
 	public int health = 4;
 	public int DamageCost = 1; 
 	public GameObject player;
+    public GameObject healthManagergm;
 
 	private Animator lose_heart;
 	private Animator anim_pig;
@@ -38,6 +39,7 @@ public class HarmfulCollision : MonoBehaviour {
 
 	private void OnTriggerEnter2D (Collider2D other) {
 		if (other.tag == "Harmful") {
+            healthManagergm.GetComponent<healthManager>().loseLife();
             GetComponent<Animator>().SetBool("touchEnemy", true);
 			Damage = true;
 			boom = true;

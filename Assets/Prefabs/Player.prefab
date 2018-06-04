@@ -88,7 +88,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3270414, y: 0.9202323}
+  m_Size: {x: 1.3270414, y: 2.32}
   m_EdgeRadius: 0
 --- !u!95 &95208243518809606
 Animator:
@@ -123,7 +123,7 @@ MonoBehaviour:
   health: 4
   DamageCost: 1
   player: {fileID: 1979595028987976}
-  obstacles: {fileID: 0}
+  healthManagergm: {fileID: 0}
 --- !u!114 &114917089049901538
 MonoBehaviour:
   m_ObjectHideFlags: 1

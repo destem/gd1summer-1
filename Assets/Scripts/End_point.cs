@@ -1,14 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class End_point : MonoBehaviour
 {
-    private Manager m;
+    private Manager manager;
+    public Text Win;
     // Use this for initialization
     void Start()
     {
-        m = GetComponent<Manager>();
+        Win.text = "";
     }
 
     // Update is called once per frame
@@ -20,8 +22,10 @@ public class End_point : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            if (m.score == m.scoreToWin)
+            if (Manager.Instance.score == Manager.Instance.scoreToWin)
             {
+                Destroy(gameObject);
+                Win.text = "You Win!";
                 Debug.Log("You win!");
             }
         }
