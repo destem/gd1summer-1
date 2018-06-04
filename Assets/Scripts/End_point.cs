@@ -26,7 +26,6 @@ public class End_point : MonoBehaviour
             {
                 Destroy(gameObject);
                 Win.text = "You Win!";
-                Debug.Log("You win!");
             }
         }
     }
