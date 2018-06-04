@@ -28,12 +28,13 @@ public class Manager : MonoBehaviour
         }
 
         instance = this;
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
     }
 
     // Use this for initialization
     void Start()
     {
+        scoreText.text = "score is 0 / 8";
         score = 0;
         scoreToWin = 8;
         SetScoreText();
