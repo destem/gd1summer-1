@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HarmfulCollision : MonoBehaviour {
 	
@@ -26,7 +27,11 @@ public class HarmfulCollision : MonoBehaviour {
 		if (Damage) {
 			health -= DamageCost;
 			Damage = false;
-		}	
+            if (health == 0)
+            {
+                SceneManager.LoadScene("main");
+            }
+        }	
 	}
 
 	/*private void OnCollisionEnter2D (Collision2D other) {
@@ -48,6 +53,7 @@ public class HarmfulCollision : MonoBehaviour {
 			anim_pig.SetBool ("Damage", Damage);
 			other.gameObject.SetActive (false);
 			boom = false;
+            
 		}
 	}
 
