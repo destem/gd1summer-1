@@ -35,7 +35,7 @@ public class Manager : MonoBehaviour
     void Start()
     {
         score = 0;
-        scoreToWin = 1;
+        scoreToWin = 8;
         SetScoreText();
     }
 
@@ -50,7 +50,7 @@ public class Manager : MonoBehaviour
 
         GameObject.FindWithTag("Player").GetComponent<Animator>().SetBool("isEating", true);
         score++;
-        print("score increase");
+        //print("score increase");
         SetScoreText();
 
         /*if (score >= scoreToWin)
@@ -61,6 +61,6 @@ public class Manager : MonoBehaviour
 
     void SetScoreText()
     {
-        scoreText.text = "score is " + score.ToString();
+        scoreText.text = "score is " + score.ToString()+ " / 8";
     }
 }

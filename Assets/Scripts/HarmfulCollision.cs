@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HarmfulCollision : MonoBehaviour {
 	
@@ -8,8 +9,8 @@ public class HarmfulCollision : MonoBehaviour {
 	public int health = 4;
 	public int DamageCost = 1; 
 	public GameObject player;
-	public GameObject obstacles;
 
+	private Animator lose_heart;
 	private Animator anim_pig;
 	private Animator anim_thing;
 	private bool boom = false;
@@ -43,8 +44,11 @@ public class HarmfulCollision : MonoBehaviour {
 			anim_thing = other.GetComponent<Animator> ();
 			anim_thing.SetBool ("Boom", boom);
 			anim_pig.SetBool ("Damage", Damage);
-			//other.gameObject.SetActive (false);
+			other.gameObject.SetActive (false);
 			boom = false;
 		}
+	}
+
+	void LoseHeart(){
 	}
 }
