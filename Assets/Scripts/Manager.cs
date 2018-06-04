@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Manager : MonoBehaviour
@@ -9,6 +10,8 @@ public class Manager : MonoBehaviour
     public int score;
     public int scoreToWin;
     public Text scoreText;
+	public Text WinText;
+	public Button Again;
 
     //creates the Manager Instance, which is required for increasing the score
     private static Manager instance = null;
@@ -35,14 +38,19 @@ public class Manager : MonoBehaviour
     void Start()
     {
         score = 0;
-        scoreToWin = 8;
+        scoreToWin = 9;
         SetScoreText();
+		WinText.enabled = false;
+		Again.enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+		if (score == scoreToWin) {
+			WinText.enabled = true;
+			Again.enabled = true;
+		}
     }
 
     public void AddScore()
@@ -59,8 +67,12 @@ public class Manager : MonoBehaviour
         }*/
     }
 
-    void SetScoreText()
+	void SetScoreText()
     {
-        scoreText.text = "score is " + score.ToString()+ " / 8";
+        scoreText.text = "score is " + score.ToString()+ " / 9";
     }
+
+	public void Replay(){
+		SceneManager.LoadScene ("main");
+	}
 }
