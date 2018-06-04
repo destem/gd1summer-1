@@ -3459,8 +3459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7fff38dd511045f9b0268059fe0d759, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heartGameObject: {fileID: 1230270504467920, guid: 12411a0cb60c84656a598fc07ca26016,
-    type: 2}
+  player: {fileID: 1260558598}
 --- !u!4 &951527783
 Transform:
   m_ObjectHideFlags: 0
@@ -3476,7 +3475,7 @@ Transform:
   - {fileID: 246082019}
   - {fileID: 1000997782}
   m_Father: {fileID: 1865650609}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &968088969
 Prefab:
@@ -5203,6 +5202,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114298415310862788, guid: 5ada8a11e893440898b03ccb2660ef78,
+        type: 2}
+      propertyPath: healthManagergm
+      value: 
+      objectReference: {fileID: 951527779}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ada8a11e893440898b03ccb2660ef78, type: 2}
   m_IsPrefabParent: 0
@@ -7290,11 +7294,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f67caac7c689b6b4391a96f373edd696, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &1784378128 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4937915366170622, guid: 5cc1a0761cb7a1147b639705a2d92a7f,
-    type: 2}
-  m_PrefabInternal: {fileID: 1508243589}
 --- !u!1001 &1780902269
 Prefab:
   m_ObjectHideFlags: 0
@@ -7404,6 +7403,11 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224339653072942178, guid: 12411a0cb60c84656a598fc07ca26016,
     type: 2}
   m_PrefabInternal: {fileID: 1780902269}
+--- !u!4 &1784378128 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4937915366170622, guid: 5cc1a0761cb7a1147b639705a2d92a7f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1508243589}
 --- !u!1001 &1794973562
 Prefab:
   m_ObjectHideFlags: 0
