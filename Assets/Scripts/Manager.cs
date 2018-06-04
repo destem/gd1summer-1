@@ -10,8 +10,8 @@ public class Manager : MonoBehaviour
     public int score;
     public int scoreToWin;
     public Text scoreText;
-	public Text WinText;
-	public Button Again;
+	//public Text WinText;
+//	public Button Again;
 
     //creates the Manager Instance, which is required for increasing the score
     private static Manager instance = null;
@@ -41,16 +41,16 @@ public class Manager : MonoBehaviour
         score = 0;
         scoreToWin = 9;
         SetScoreText();
-		WinText.enabled = false;
-		Again.enabled = false;
+	//	WinText.enabled = false;
+	//	Again.enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
 		if (score == scoreToWin) {
-			WinText.enabled = true;
-			Again.enabled = true;
+	//		WinText.enabled = true;
+	//		Again.enabled = true;
 		}
     }
 
@@ -73,7 +73,7 @@ public class Manager : MonoBehaviour
         scoreText.text = "score is " + score.ToString()+ " / 9";
     }
 
-	public void Replay(){
+/*	public void Replay(){
 		SceneManager.LoadScene ("main");
-	}
+	}*/
 }
